@@ -1,9 +1,10 @@
-import Head from "next/head";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import { getSortedPostsData } from "../lib/posts";
+import styles from '@/styles/Home.module.css';
+import { Inter } from 'next/font/google';
+import Head from 'next/head';
+import Link from 'next/link';
+import { getSortedPostsData } from '../lib/posts';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ allPostsData }: any) {
   return (
@@ -32,16 +33,15 @@ export default function Home({ allPostsData }: any) {
           {/* <ul> */}
           {allPostsData.map(({ id, date, title }: any) => (
             // <li key={id}>
-            <a
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            <Link
+              href={`/posts/` + id}
               className={styles.card}
-              target="_blank"
               rel="noopener noreferrer"
               key={id}
             >
               <h2 className={inter.className}>{title}</h2>
               <p className={inter.className}>{date}</p>
-            </a>
+            </Link>
             // </li>
           ))}
           {/* </ul> */}
