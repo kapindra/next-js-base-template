@@ -1,9 +1,6 @@
 import Card from '@/components/Card/Card';
-import { Inter } from 'next/font/google';
 import Head from 'next/head';
 import { getSortedPostsData } from '../lib/posts';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ allPostsData }: any) {
   return (
