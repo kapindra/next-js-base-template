@@ -20,19 +20,17 @@ export default function Home({ allPostsData }: any) {
           <p>Hi There!</p>
           <div>
             <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              href="https://kapindra.com.np"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Good to see you!
+              I am here!
             </a>
           </div>
         </div>
 
         <div className={styles.grid}>
-          {/* <ul> */}
           {allPostsData.map(({ id, date, title }: any) => (
-            // <li key={id}>
             <Link
               href={`/posts/` + id}
               className={styles.card}
@@ -42,9 +40,7 @@ export default function Home({ allPostsData }: any) {
               <h2 className={inter.className}>{title}</h2>
               <p className={inter.className}>{date}</p>
             </Link>
-            // </li>
           ))}
-          {/* </ul> */}
         </div>
       </main>
     </>
