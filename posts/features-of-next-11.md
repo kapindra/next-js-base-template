@@ -1,6 +1,7 @@
 ---
 title: 'Features of NextJs 11'
 date: '2020-01-02'
+description: 'Description'
 ---
 
 Here are some of the features introduced in the newer versions of Next.js:

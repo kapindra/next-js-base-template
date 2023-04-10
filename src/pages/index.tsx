@@ -1,7 +1,6 @@
-import styles from '@/styles/Home.module.css';
+import Card from '@/components/Card/card';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
-import Link from 'next/link';
 import { getSortedPostsData } from '../lib/posts';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -15,8 +14,8 @@ export default function Home({ allPostsData }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
+      <main className="container px-3 mx-auto">
+        <div>
           <p>Hi There!</p>
           <div>
             <a
@@ -29,18 +28,20 @@ export default function Home({ allPostsData }: any) {
           </div>
         </div>
 
-        <div className={styles.grid}>
-          {allPostsData.map(({ id, date, title }: any) => (
-            <Link
-              href={`/posts/` + id}
-              className={styles.card}
-              rel="noopener noreferrer"
-              key={id}
-            >
-              <h2 className={inter.className}>{title}</h2>
-              <p className={inter.className}>{date}</p>
-            </Link>
-          ))}
+        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+          {allPostsData.map(
+            ({ id, date, title, description }: any, index: any) => (
+              // <Link href={`/posts/` + id} rel="noopener noreferrer" key={id}>
+              <Card
+                key={index}
+                slug={id}
+                date={date}
+                title={title}
+                description={description}
+              />
+              // </Link>
+            )
+          )}
         </div>
       </main>
     </>
