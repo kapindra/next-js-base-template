@@ -10,8 +10,10 @@ const NewPost = ({ postData }: any) => {
           content="Author: A.N. Author, Illustrator: P. Picture, Category: Books, Price:  £9.24, Length: 784 pages"
         />
       </Head>
-      <div>{postData.title}</div>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <main>
+        <div>{postData.title}</div>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </main>
     </>
   );
 };

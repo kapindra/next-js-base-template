@@ -226,6 +226,11 @@ npx husky add .husky/commit-msg "npx --no -- commitlint --edit $1"
 }
 ```
 
+### UI design
+
+Hyper UI design based on Tailwind CSS framework has been implemented.
+https://www.hyperui.dev/
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
