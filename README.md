@@ -22,6 +22,20 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## What's Inside
+
+- NextJs application
+- Typescript
+- Redux Toolkit Store
+- Tailwind CSS
+- Hyper UI (Based on Tailwind CSS)
+- Switch between dark and light theme using next-themes
+- Blog posts with Markdown (using gray-matter and remark-html)
+- Storybook Config
+- Husky Config
+- Prettier formatting Config
+- Eslint
+
 ## Initial Configurations
 
 Follow https://dev.to/alexeagleson/how-to-build-scalable-architecture-for-your-nextjs-project-2pb7
