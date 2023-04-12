@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Card = ({ slug, date, title, description }: any) => {
   return (
     <Link href={`posts/` + slug}>
-      <article className="overflow-hidden rounded-lg shadow dark:shadow-gray-700 transition hover:shadow-lg">
+      <article className="overflow-hidden rounded-lg shadow dark:shadow-gray-500 transition hover:shadow-md">
         <Image
           alt="Office"
           src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"

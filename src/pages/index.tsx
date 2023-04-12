@@ -2,10 +2,10 @@ import Card from '@/components/Card/Card';
 import Head from 'next/head';
 import ThemeSwitch from '../components/ThemeSwitch/ThemeSwitch';
 import { getSortedPostsData } from '../lib/posts';
-import { useAppSelector } from '../store/redux-hooks';
+// import { useAppSelector } from '../store/redux-hooks';
 
 export default function Home({ allPostsData }: any) {
-  const { darkMode } = useAppSelector<any>((state) => state.darkMode);
+  // const { darkMode } = useAppSelector<any>((state) => state.darkMode);
 
   return (
     <>
@@ -15,9 +15,7 @@ export default function Home({ allPostsData }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main
-        className={`px-3 min-h-screen ` + (darkMode ? 'dark bg-slate-800' : '')}
-      >
+      <main className={`px-3`}>
         <div className="container mx-auto">
           <div className="flex justify-between py-4">
             <p className="dark:text-white text-2xl font-medium">LOGO</p>

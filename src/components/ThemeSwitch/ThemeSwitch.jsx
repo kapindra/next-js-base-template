@@ -1,12 +1,22 @@
-import { toggleDarkTheme } from '@/store/slices/themeSlice';
-import { useAppDispatch, useAppSelector } from '../../store/redux-hooks';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 const ThemeSwitch = () => {
-  const dispatch = useAppDispatch();
-  const { darkMode } = useAppSelector((state) => state.darkMode);
+  const [mounted, setMounted] = useState(false);
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
   const toggleDarkMode = () => {
-    dispatch(toggleDarkTheme());
+    theme === 'dark' ? setTheme('light') : setTheme('dark');
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <>
       <button
@@ -17,7 +27,7 @@ const ThemeSwitch = () => {
       >
         <svg
           id="theme-toggle-dark-icon"
-          className={`${darkMode ? 'hidden' : ''} w-5 h-5`}
+          className={`${currentTheme === 'dark' ? 'hidden' : ''} w-5 h-5`}
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +36,7 @@ const ThemeSwitch = () => {
         </svg>
         <svg
           id="theme-toggle-light-icon"
-          className={`${darkMode ? '' : 'hidden'} w-5 h-5`}
+          className={`${currentTheme === 'light' ? 'hidden' : ''} w-5 h-5`}
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
