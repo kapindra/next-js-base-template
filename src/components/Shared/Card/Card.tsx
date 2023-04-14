@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Card = ({ slug, date, title, description }: any) => {
+const Card = ({ date, title, description }: any) => {
   return (
-    <Link href={`posts/` + slug}>
+    <Link href="/">
       <article className="overflow-hidden rounded-lg shadow dark:shadow-gray-500 transition hover:shadow-md">
         <Image
           alt="Office"

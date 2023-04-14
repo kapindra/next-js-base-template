@@ -1,12 +1,13 @@
-import Card from '@/components/Card/Card';
+import Hero from '@/components/Hero/Hero';
+import Header from '@/components/Shared/Header/Header';
+import TopRated from '@/components/TopRated/TopRated';
 import Head from 'next/head';
-import ThemeSwitch from '../components/ThemeSwitch/ThemeSwitch';
-import { getSortedPostsData } from '../lib/posts';
-// import { useAppSelector } from '../store/redux-hooks';
 
-export default function Home({ allPostsData }: any) {
-  // const { darkMode } = useAppSelector<any>((state) => state.darkMode);
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
 
+export default function Home({ homes = [] }) {
+  console.log(homes, 'homes');
   return (
     <>
       <Head>
@@ -15,40 +16,11 @@ export default function Home({ allPostsData }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`px-3`}>
-        <div className="container mx-auto">
-          <div className="flex justify-between py-4">
-            <p className="dark:text-white text-2xl font-medium">LOGO</p>
-            <div className="flex items-center divide-x">
-              <a
-                href="https://kapindra.com.np"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mx-auto pr-4 dark:text-white"
-              >
-                I am here!
-              </a>
-              <div className="pl-4">
-                <ThemeSwitch />
-              </div>
-            </div>
-          </div>
-
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 pt-10 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-            {allPostsData.map(
-              ({ id, date, title, description }: any, index: any) => (
-                // <Link href={`/posts/` + id} rel="noopener noreferrer" key={id}>
-                <Card
-                  key={index}
-                  slug={id}
-                  date={date}
-                  title={title}
-                  description={description}
-                />
-                // </Link>
-              )
-            )}
-          </div>
+      <main>
+        <Header />
+        <div className="container mx-auto px-3 lg:px-4">
+          <Hero />
+          <TopRated homesList={homes} />
         </div>
       </main>
     </>
@@ -56,10 +28,10 @@ export default function Home({ allPostsData }: any) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const homes = await prisma.home.findMany();
   return {
     props: {
-      allPostsData,
+      homes: JSON.parse(JSON.stringify(homes)),
     },
   };
 }

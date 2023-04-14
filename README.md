@@ -12,6 +12,9 @@ yarn dev
 pnpm dev
 ```
 
+To run prisma studio:
+`npx prisma studio`
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
@@ -35,6 +38,12 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Husky Config
 - Prettier formatting Config
 - Eslint
+
+## Branch - next-auth
+
+Links:
+tutorials on nextjs: https://next-auth.js.org/tutorials
+Course to follow: https://themodern.dev/courses/build-a-fullstack-app-with-nextjs-supabase-and-prisma-322389284337222224
 
 ## Initial Configurations
 
