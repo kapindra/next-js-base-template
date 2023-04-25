@@ -2,7 +2,6 @@ import Card from '../Shared/Card/Card';
 
 const TopRated = (props: any) => {
   const { homesList } = props;
-  console.log('vitra bata', props);
   return (
     <>
       <h2 className="text-2xl text-center">Top Rated Hotels</h2>

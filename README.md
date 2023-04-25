@@ -38,6 +38,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Husky Config
 - Prettier formatting Config
 - Eslint
+- Supabase database connection with Prisma
+- List database hotel
 
 ## Branch - next-auth
 
