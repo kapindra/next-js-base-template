@@ -5,7 +5,7 @@ import Logo from '../../../public/logo.png';
 const Footer = () => {
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
-      <footer className="px-4 py-12 mx-auto max-w-7xl">
+      <footer className="px-4 sm:px-6 lg:px-8 py-12 mx-auto max-w-screen-xl">
         <div className="grid grid-cols-2 gap-10 mb-3 md:grid-cols-3 lg:grid-cols-11 lg:gap-20">
           <div className="col-span-3">
             <Link
