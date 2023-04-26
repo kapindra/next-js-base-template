@@ -9,8 +9,8 @@ const Card = ({ slug, date, title, description }: any) => {
             alt="Office"
             src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
             className="object-cover w-full h-56 mb-5 bg-center rounded"
-            width={300}
-            height={300}
+            width={130}
+            height={130}
           />
           <p className="mb-2 text-xs font-semibold tracking-wider text-gray-400 group-hover:text-gray-500 uppercase">
             Development

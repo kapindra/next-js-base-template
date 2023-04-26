@@ -13,7 +13,7 @@ const Footer = () => {
               title="Hellonext Home Page"
               className="flex items-center"
             >
-              <Image src={Logo} alt="Kapindra Logo" width={50} height={50} />
+              <Image src={Logo} alt="Kapindra Logo" className="h-12 w-12" />
               <span className="sr-only">Kapindra Logo</span>
             </Link>
             <p className="my-4 text-xs leading-normal text-gray-600 dark:text-gray-400">

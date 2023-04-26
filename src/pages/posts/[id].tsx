@@ -7,7 +7,7 @@ const NewPost = ({ postData }: any) => {
   return (
     <>
       <Head>
-        <title>Read | {postData.title}</title>
+        <title>{postData.title}</title>
         <meta name="description" content="Author: Kapindra Raut" />
       </Head>
       <main>
