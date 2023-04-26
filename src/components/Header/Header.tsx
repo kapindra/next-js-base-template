@@ -15,7 +15,7 @@ const Header = () => {
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <Link className="block text-teal-600" href="/">
                 <span className="sr-only">Home</span>
-                <Image src={Logo} className="h-12 w-12" alt="Kapindra Logo" />
+                <Image src={Logo} className="h-8 w-8" alt="Kapindra Logo" />
               </Link>
             </div>
 
