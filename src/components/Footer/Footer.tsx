@@ -16,7 +16,7 @@ const Footer = () => {
               <Image src={Logo} alt="Kapindra Logo" width={50} height={50} />
               <span className="sr-only">Kapindra Logo</span>
             </Link>
-            <p className="my-4 text-xs leading-normal text-gray-600">
+            <p className="my-4 text-xs leading-normal text-gray-600 dark:text-gray-400">
               A blog created for you with <strong>&#x2764;</strong> from{' '}
               <Link
                 href="https://kapindra.com.np"
@@ -149,10 +149,10 @@ const Footer = () => {
           </nav>
         </div>
         <div className="flex flex-col items-start justify-between pt-10 mt-10 border-t border-gray-100 dark:border-gray-700 md:flex-row md:items-center">
-          <p className="mb-2 text-xs text-left text-gray-600 md:mb-0">
+          <p className="mb-2 text-xs text-left text-gray-600 dark:text-gray-500 md:mb-0">
             Knowledge sharing blog
           </p>
-          <p className="mb-0 text-xs text-left text-gray-600 md:mb-0">
+          <p className="mb-0 text-xs text-left text-gray-600 dark:text-gray-500 md:mb-0">
             Copyright &copy; 2023 Kapindra
           </p>
         </div>
