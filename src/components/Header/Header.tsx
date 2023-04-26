@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       <header
-        className="shadow dark:shadow-gray-700 w-full bg-white dark:bg-gray-800 fixed"
+        className="shadow dark:shadow-gray-700 w-full bg-white bg-opacity-95 dark:bg-opacity-95 dark:bg-gray-800 fixed"
         aria-label="Site Header"
       >
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
