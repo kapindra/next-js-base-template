@@ -1,7 +1,7 @@
 ---
 title: 'Features of NextJs 11'
 date: '2020-01-02'
-description: 'Description'
+description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique officia sunt odit consectetur, exercitationem excepturi eum nemo assumenda blanditiis vel! Blanditiis voluptate necessitatibus at eius enim ipsam quam neque omnis!'
 ---
 
 Here are some of the features introduced in the newer versions of Next.js:

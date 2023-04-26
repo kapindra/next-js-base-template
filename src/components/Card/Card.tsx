@@ -1,33 +1,34 @@
 import Image from 'next/image';
 import Link from 'next/link';
-
 const Card = ({ slug, date, title, description }: any) => {
   return (
-    <Link href={`posts/` + slug}>
-      <article className="overflow-hidden rounded-lg shadow dark:shadow-gray-500 transition hover:shadow-md">
-        <Image
-          alt="Office"
-          src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-          className="h-56 w-full object-cover"
-          width={300}
-          height={300}
-        />
-
-        <div className="p-4 sm:p-6">
-          <time dateTime="2022-10-10" className="block text-xs text-gray-500">
-            {date}
-          </time>
-
-          <h3 className="mt-0.5 text-lg text-gray-900 dark:text-gray-300">
+    <>
+      <article>
+        <Link href={`posts/` + slug} className="group">
+          <Image
+            alt="Office"
+            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+            className="object-cover w-full h-56 mb-5 bg-center rounded"
+            width={300}
+            height={300}
+          />
+          <p className="mb-2 text-xs font-semibold tracking-wider text-gray-400 group-hover:text-gray-500 uppercase">
+            Development
+          </p>
+          <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-gray-300 group-hover:text-cyan-500 dark:group-hover:text-cyan-500">
             {title}
-          </h3>
-
-          <p className="mt-2 text-sm leading-relaxed text-gray-500 line-clamp-3">
+          </h2>
+          <p className="mb-3 text-sm font-normal text-gray-500">
             {description}
           </p>
-        </div>
+          <p className="mb-3">
+            <time dateTime="2022-10-10" className="block text-xs text-gray-400">
+              {date}
+            </time>
+          </p>
+        </Link>
       </article>
-    </Link>
+    </>
   );
 };
 

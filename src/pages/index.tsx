@@ -1,6 +1,7 @@
 import Card from '@/components/Card/Card';
+import Footer from '@/components/Footer/Footer';
 import Head from 'next/head';
-import ThemeSwitch from '../components/ThemeSwitch/ThemeSwitch';
+import Header from '../components/Header/Header';
 import { getSortedPostsData } from '../lib/posts';
 // import { useAppSelector } from '../store/redux-hooks';
 
@@ -15,29 +16,19 @@ export default function Home({ allPostsData }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`px-3`}>
-        <div className="container mx-auto">
-          <div className="flex justify-between py-4">
-            <p className="dark:text-white text-2xl font-medium">LOGO</p>
-            <div className="flex items-center divide-x">
-              <a
-                href="https://kapindra.com.np"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mx-auto pr-4 dark:text-white"
-              >
-                I am here!
-              </a>
-              <div className="pl-4">
-                <ThemeSwitch />
-              </div>
-            </div>
-          </div>
-
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 pt-10 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+      <main>
+        <Header />
+        <section className="px-4 sm:px-6 lg:px-8 py-28 lg:pt-40 mx-auto max-w-screen-xl">
+          {/* <h2 className="mb-2 text-3xl font-extrabold leading-tight text-gray-900">
+            Skcript Blog
+          </h2>
+          <p className="mb-20 text-lg text-gray-500">
+            Comes directly from the desk of engineers, creators and managers at
+            Skcript.
+          </p> */}
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
             {allPostsData.map(
               ({ id, date, title, description }: any, index: any) => (
-                // <Link href={`/posts/` + id} rel="noopener noreferrer" key={id}>
                 <Card
                   key={index}
                   slug={id}
@@ -45,11 +36,11 @@ export default function Home({ allPostsData }: any) {
                   title={title}
                   description={description}
                 />
-                // </Link>
               )
             )}
           </div>
-        </div>
+        </section>
+        <Footer />
       </main>
     </>
   );
